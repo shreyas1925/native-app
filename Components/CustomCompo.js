@@ -1,7 +1,8 @@
 import React from "react";
+import { Text } from "react-native";
 
 const CustomCompo = () => {
-  return <div>Hello I am CustomCompo from native!</div>;
+  return <Text>Hello I am Custom from native!✅✅</Text>;
 };
 
 export default CustomCompo;

@@ -23,6 +23,6 @@ const styles = StyleSheet.create({
 
   para: {
     fontSize: 25,
-    fontFamily: "Helvetica Neue",
+    fontFamily: "sans-serif",
   },
 });

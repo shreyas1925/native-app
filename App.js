@@ -3,12 +3,13 @@ import { StyleSheet, Text, View } from "react-native";
 import CustomCompo from "./Components/CustomCompo";
 
 export default function App() {
+  let name = "Shreyas"
   return (
-    <View style={styles.container}>
+    <View View style={styles.container} >
       <Text style={styles.para}>Heyy Shreyas 🚀❤️ </Text>
-      <CustomCompo />
+      <CustomCompo name={name} />
       <StatusBar style="auto" />
-    </View>
+    </View >
   );
 }
 

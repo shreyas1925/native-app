@@ -1,8 +1,13 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 
-const CustomCompo = () => {
-  return <Text>Hello I am Custom from native!✅✅</Text>;
+const CustomCompo = ({ name }) => {
+  return (
+    <View>
+      <Text>Welcome back {name} through props!!</Text>
+      <Text>Hello I am Custom from native!✅✅</Text>
+    </View>
+  )
 };
 
 export default CustomCompo;

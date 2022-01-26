@@ -5,7 +5,7 @@ import CustomCompo from "./Components/CustomCompo";
 export default function App() {
   let name = "Shreyas"
   return (
-    <View View style={styles.container} >
+    <View style={styles.container} >
       <Text style={styles.para}>Heyy Shreyas 🚀❤️ </Text>
       <CustomCompo name={name} />
       <StatusBar style="auto" />

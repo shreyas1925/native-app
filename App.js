@@ -1,14 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import CustomCompo from "./Components/CustomCompo";
-import FlastList from "./screens/FlastList";
+import FlastListDemo from "./screens/FlastList";
 
 export default function App() {
   let name = "Shreyas"
   return (
-    <View style={styles.container} >
+    <View >
       {/* <Text style={styles.para}>Heyy Shreyas 🚀❤️ </Text> */}
-      <FlastList />
+      <FlastListDemo />
       {/* <CustomCompo name={name} /> */}
       {/* <StatusBar style="auto" /> */}
     </View >
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "skyblue",
+    backgroundColor: "white",
   },
 
   para: {

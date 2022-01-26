@@ -23,28 +23,46 @@ const FlastList = () => {
         {
             index: "5",
             name: "Xoxo"
-        },]
+        },
+        {
+            index: "6",
+            name: "James"
+        },
+
+    ]
     return (
-        <View>
-            <Text style={styles.text}>List of names 👨‍💻</Text>
-            <FlatList keyExtractor={(key) => { return key.index }}
-                data={listOfnames} renderItem={(ele) => {
-                    return <Text style={styles.lists}>{ele.item.name}</Text>
-                }}
-            />
-        </View>
+        <FlatList data={listOfnames}
+            style={styles.listStyle}
+            horizontal
+            showsVerticalScrollIndicator={false}
+            renderItem={({ item }) => {
+                return (
+                    <View style={styles.viewStyle}>
+                        <Text style={styles.textStyle}>{item.name}</Text>
+                        <Text style={styles.textStyle}>{item.index}</Text>
+                    </View>
+                )
+            }}
+        />
     )
 }
 
 const styles = StyleSheet.create({
-    text: {
-        fontSize: 40,
-        fontWeight: "bold"
+    listStyle: {
+        textAlign: "center",
+        padding: 5,
+        margin: 20
     },
-    lists: {
+    textStyle: {
+        color: "white",
         fontSize: 25,
-        fontWeight: "bold",
-        marginTop: 20
+        fontWeight: "bold"
+
+    },
+    viewStyle: {
+        margin: 20,
+        backgroundColor: "skyblue",
+        padding: 15,
     }
 })
 

@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
   firstText: {
     color: "blue",
     fontSize: 30,
-
   }
 })
 

@@ -6,6 +6,7 @@ const CustomCompo = ({ name }) => {
     <View>
       <Text style={styles.firstText}>Welcome back {name} through props!!</Text>
       <Text style={styles.secondText}>Hello I am Custom from native!✅✅</Text>
+      <Text style={styles.firstText}>Welcome back {name} through props!!</Text>
     </View>
   )
 };

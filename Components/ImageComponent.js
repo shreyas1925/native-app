@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Alert, Button } from 'react-native';
 import React from 'react';
 
 export default function ImageComponent() {
@@ -9,6 +9,11 @@ export default function ImageComponent() {
                 style={styles.img}
                 source={require("./image.jpg")}
             />
+            <Button
+                style={styles.btn}
+                title="Connect us"
+                onPress={() => Alert.alert("Hurray!!")}
+            />
         </View>
     );
 }
@@ -18,6 +23,7 @@ const styles = StyleSheet.create({
     img: {
         width: 300,
         height: 300,
+        margin: "20px"
     },
     view: {
         height: 600,

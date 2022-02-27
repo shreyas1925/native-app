@@ -18,7 +18,7 @@ export default function ImageComponent() {
 
             <TouchableOpacity
                 style={styles.btn}
-                onPress={() => Alert.alert("Hurray!!")}
+                onPress={() => console.log("Hurray!!")}
             >
                 <Text style={styles.textb}>Connect dude</Text>
             </TouchableOpacity>

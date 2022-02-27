@@ -7,7 +7,7 @@ const Netflix = () => {
         <View style={styles.main}>
             <Text style={styles.text}>Netflix Card</Text>
             <View style={styles.card}>
-                <Image style={styles.img} source={require('../assets/image.jpg')} />
+                <Image style={styles.img} source={require('../assets/raksha.jpg')} />
                 <Text style={styles.main2}>Rakshasudu (Telugu)</Text>
                 <Text style={styles.para}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos officiis culpa fuga.
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
     },
     card: {
-        height: "500px",
+        height: undefined,
         width: "300px",
         borderWidth: 1,
         // display: 'flex',
@@ -48,9 +48,11 @@ const styles = StyleSheet.create({
     },
     img: {
         // flex: 1,
+        marginTop: 30,
         width: "300px",
-        height: "300px",
-        // resizeMode: "contain",
+        height: undefined,
+        aspectRatio: 1,
+        resizeMode: "contain",
     },
     para: {
         // textAlign: 'center',

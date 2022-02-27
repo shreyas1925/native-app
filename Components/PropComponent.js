@@ -2,6 +2,9 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import ImageComponent from './ImageComponent'
 
+// props always work from parent to child
+// we have destructuring in props ({})
+
 const PropComponent = () => {
     return (
         <View>

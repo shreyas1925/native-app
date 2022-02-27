@@ -2,13 +2,15 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import CustomCompo from "./Components/CustomCompo";
 import ImageComponent from "./Components/ImageComponent";
+import PropComponent from "./Components/PropComponent";
 // import FlastListDemo from "./screens/FlastList";
 
 export default function App() {
   let name = "Shreyas"
   return (
     <View >
-      <ImageComponent />
+      <PropComponent />
+      {/* <ImageComponent /> */}
       {/* <Text style={styles.para}>Heyy Shreyas 🚀❤️ </Text> */}
       {/* <FlastListDemo /> */}
       {/* <CustomCompo name={name} /> */}

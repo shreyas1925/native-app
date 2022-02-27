@@ -2,10 +2,10 @@ import { View, Text, Image, StyleSheet, Alert, Button } from 'react-native';
 import React from 'react';
 import { TouchableOpacity } from 'react-native-web';
 
-export default function ImageComponent() {
+export default function ImageComponent({ text }) {
     return (
         <View style={styles.view}>
-            <Text style={styles.text}>Hello world! 😂</Text>
+            <Text style={styles.text}>{text}</Text>
             <Image
                 style={styles.img}
                 source={require("../assets/image.jpg")}

@@ -1,5 +1,6 @@
 import { View, Text, Image, StyleSheet, Alert, Button } from 'react-native';
 import React from 'react';
+import { TouchableOpacity } from 'react-native-web';
 
 export default function ImageComponent() {
     return (
@@ -7,13 +8,21 @@ export default function ImageComponent() {
             <Text style={styles.text}>Hello world! 😂</Text>
             <Image
                 style={styles.img}
-                source={require("./image.jpg")}
+                source={require("../assets/image.jpg")}
             />
-            <Button
+            {/* <Button
                 style={styles.btn}
                 title="Connect us"
                 onPress={() => Alert.alert("Hurray!!")}
-            />
+            /> */}
+
+            <TouchableOpacity
+                style={styles.btn}
+                onPress={() => Alert.alert("Hurray!!")}
+            >
+                <Text style={styles.textb}>Connect dude</Text>
+            </TouchableOpacity>
+
         </View>
     );
 }
@@ -31,9 +40,21 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    textb: {
+        color: "skyblue",
+        fontWeight: "bold",
+        fontsize: 17,
+    },
+    btn: {
+        borderWidth: 3,
+        borderColor: "skyblue",
+        backgroundColor: "white",
+        padding: "13px"
+    },
     text: {
         margin: "20px",
-        fontSize: "29px",
-        fontWeight: "bold"
+        fontSize: 29,
+        fontWeight: "bold",
+
     }
 })

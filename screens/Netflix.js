@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button, Image } from 'react-native'
+import { StyleSheet, Text, View, Button, Image, Linking } from 'react-native'
 import React from 'react'
 
 
@@ -15,7 +15,7 @@ const Netflix = () => {
                 <Button
                     style={styles.btn}
                     title="Watch now"
-                    onPress={() => Alert.alert("Hurray!!")}
+                    onPress={() => Linking.openURL("https://netflix.com/")}
                 />
             </View>
         </View>

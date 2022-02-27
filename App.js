@@ -3,13 +3,15 @@ import { StyleSheet, Text, View } from "react-native";
 import CustomCompo from "./Components/CustomCompo";
 import ImageComponent from "./Components/ImageComponent";
 import PropComponent from "./Components/PropComponent";
+import Netflix from "./screens/Netflix";
 // import FlastListDemo from "./screens/FlastList";
 
 export default function App() {
   let name = "Shreyas"
   return (
     <View >
-      <PropComponent />
+      <Netflix />
+      {/* <PropComponent /> */}
       {/* <ImageComponent /> */}
       {/* <Text style={styles.para}>Heyy Shreyas 🚀❤️ </Text> */}
       {/* <FlastListDemo /> */}

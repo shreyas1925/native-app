@@ -1,8 +1,21 @@
 import { View, Text, Image, StyleSheet, Alert, Button } from 'react-native';
 import React from 'react';
 import { TouchableOpacity } from 'react-native-web';
+import {
+    Aladin_400Regular
+} from '@expo-google-fonts/aladin'
 
+import { useFonts } from '@expo-google-fonts/aladin';
+import AppLoading from "expo-app-loading"
 export default function ImageComponent({ text }) {
+
+    let [fonts] = useFonts({
+        Aladin_400Regular
+    })
+
+    if (!fonts) {
+        return < AppLoading />
+    }
     return (
         <View style={styles.view}>
             <Text style={styles.text}>{text}</Text>

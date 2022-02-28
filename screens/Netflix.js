@@ -1,8 +1,18 @@
 import { StyleSheet, Text, View, Button, Image, Linking } from 'react-native'
 import React from 'react'
-
-
+import {
+    AguafinaScript_400Regular
+} from '@expo-google-fonts/aguafina-script'
+import AppLoading from 'expo-app-loading'
+import { useFonts } from 'expo-font'
 const Netflix = () => {
+
+
+    let [fontsl] = useFonts({
+        AguafinaScript_400Regular
+    })
+
+    if (!fontsl) return <AppLoading />
     return (
         <View style={styles.main}>
             <Text style={styles.text}>Netflix Card</Text>
@@ -37,6 +47,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         marginBottom: 10,
         fontWeight: "bold",
+        fontFamily: "AguafinaScript_400Regular"
     },
     card: {
         height: undefined,

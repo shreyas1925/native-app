@@ -10,3 +10,7 @@ const BoxModel = () => {
 }
 
 export default BoxModel
+
+// 1. paddingVertical and paddingHorizontal in react native
+// 2. borderWidth , borderColor
+// 3. marginHorizontal, marginVertical

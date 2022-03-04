@@ -4,14 +4,16 @@ import Counter from "./Components/Counter";
 import CustomCompo from "./Components/CustomCompo";
 import ImageComponent from "./Components/ImageComponent";
 import PropComponent from "./Components/PropComponent";
-import Netflix from "./screens/Netflix";
-// import FlastListDemo from "./screens/FlastList";
+import ColorChanger from "./screens/ColorChanger";
+import Netflix from "./screens/NetflixCard";
+import FlastListDemo from "./screens/FlastList";
 
 export default function App() {
   let name = "Shreyas"
   return (
     <View >
-      <Counter />
+      <ColorChanger />
+      {/* <Counter /> */}
       {/* <Netflix /> */}
       {/* <PropComponent /> */}
       {/* <ImageComponent /> */}

@@ -1,30 +1,38 @@
-import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, FlatList, TouchableOpacity, useState } from 'react-native'
 import React from 'react'
 
 
 const ColorChanger = () => {
+
+    const getRandomColor = () => {
+        const red = Math.floor(Math.random() * 256)
+        const green = Math.floor(Math.random() * 256)
+        const blue = Math.floor(Math.random() * 256)
+
+        return `rgb(${red}, ${green}, ${blue})`
+    }
+
+    const [colors, setColors] = useState([]);
+    console.log(colors)
     return (
         <View style={styles.mainContainer}>
-            <TouchableOpacity style={styles.buttonStyle}>
+            <TouchableOpacity
+                style={styles.buttonStyle}
+                onPress={() => setColors([...colors, getRandomColor()])}
+            >
                 <Text style={styles.colortext}>Generate Color</Text>
             </TouchableOpacity>
-            {/* <FlatList
+            <FlatList
                 renderItem={({ }) => {
-                    return ( */}
-            <View style={styles.Container}>
-                <View style={styles.subContainer}>
-                    text
-                </View>
-                <View style={styles.subContainer}>
-                    text
-                </View>
-                <View style={styles.subContainer}>
-                    text
-                </View>
-            </View>
-            {/* )
+                    return (
+                        <View style={styles.Container}>
+                            <View style={styles.subContainer}>
+                                text
+                            </View>
+                        </View>
+                    )
                 }}
-            /> */}
+            />
 
         </View>
     )

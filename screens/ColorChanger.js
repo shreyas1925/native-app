@@ -1,8 +1,10 @@
-import { StyleSheet, Text, View, FlatList, TouchableOpacity, useState } from 'react-native'
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { useState } from 'react/cjs/react.development';
 
 
 const ColorChanger = () => {
+    const [colors, setColors] = useState([]);
 
     const getRandomColor = () => {
         const red = Math.floor(Math.random() * 256)
@@ -12,7 +14,7 @@ const ColorChanger = () => {
         return `rgb(${red}, ${green}, ${blue})`
     }
 
-    const [colors, setColors] = useState([]);
+
     console.log(colors)
     return (
         <View style={styles.mainContainer}>
@@ -23,18 +25,29 @@ const ColorChanger = () => {
                 <Text style={styles.colortext}>Generate Color</Text>
             </TouchableOpacity>
             <FlatList
-                renderItem={({ }) => {
+                data={colors}
+                renderItem={({ item }) => {
                     return (
                         <View style={styles.Container}>
-                            <View style={styles.subContainer}>
-                                text
-                            </View>
+                            <Text style={{
+                                borderWidth: 3,
+                                padding: 10,
+                                width: "40%",
+                                height: "20%",
+                                flexDirection: "row",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                margin: 10,
+                                backgroundColor: item
+                            }}>
+
+                            </Text>
                         </View>
                     )
                 }}
             />
 
-        </View>
+        </View >
     )
 }
 
@@ -49,7 +62,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#f8edeb"
     },
     buttonStyle: {
-        marginTop: 50,
+        marginTop: 20,
         borderWidth: 2,
         padding: 10,
         width: "70%",
@@ -61,16 +74,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         width: "100vw",
         height: "100vh"
-    },
-    subContainer: {
-        borderWidth: 3,
-        padding: 20,
-        width: "40%",
-        height: "20%",
-        justifyContent: "center",
-        alignItems: "center",
-        margin: 20,
-        backgroundColor: "rgb(198,222,98)"
     },
     colortext: {
         color: "white",

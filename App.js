@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import Counter from "./Components/Counter";
 import CustomCompo from "./Components/CustomCompo";
 import ImageComponent from "./Components/ImageComponent";
 import PropComponent from "./Components/PropComponent";
@@ -10,7 +11,8 @@ export default function App() {
   let name = "Shreyas"
   return (
     <View >
-      <Netflix />
+      <Counter />
+      {/* <Netflix /> */}
       {/* <PropComponent /> */}
       {/* <ImageComponent /> */}
       {/* <Text style={styles.para}>Heyy Shreyas 🚀❤️ </Text> */}

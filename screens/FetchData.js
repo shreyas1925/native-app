@@ -9,7 +9,7 @@ const FetchData = () => {
     const [isload, isSetLoad] = useState(true)
     const fetchData = async () => {
         try {
-            const res = await fetch("https://thapatechnical.github.io/userapi/users.json");
+            const res = await fetch("https://shreyas1925.github.io/restapi-userdata/biodata.json");
             const mydata = await res.json();
             setData(mydata);
             // isSetLoad(true);
@@ -31,7 +31,7 @@ const FetchData = () => {
                         renderItem={({ item }) => {
                             return (
                                 <View style={styles.subContainer}>
-                                    <Text style={[styles.textStyle, styles.spanStyle]}>{item.userId}</Text>
+                                    <Text style={[styles.textStyle, styles.spanStyle]}>{item.userid}</Text>
                                     <Text style={styles.textStyle}>{item.name}</Text>
                                     <Text style={styles.textStyle}>{item.email}</Text>
                                 </View >

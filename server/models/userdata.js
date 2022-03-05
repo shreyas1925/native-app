@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const usersSchema = mongoose.Schema({
-    name: {
+    userid: {
         type: Number,
         required: true,
         trim: true,

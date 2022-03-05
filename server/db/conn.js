@@ -3,7 +3,7 @@ const chalk = require("chalk");
 
 mongoose
     .connect(
-        "mongodb+srv://shreyas:shreyasshettigar@cluster0.ireuw.mongodb.net/biodata?retryWrites=true&w=majority",
+        "mongodb+srv://<name>:<password>@cluster0.ireuw.mongodb.net/biodata?retryWrites=true&w=majority",
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,

@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
     },
     spanStyle: {
         borderWidth: 2,
-        width: "15%",
-        borderRadius: "60%",
+        width: "20%",
+        borderRadius: "85%",
         textAlign: "center",
     },
     loaderStyle: {

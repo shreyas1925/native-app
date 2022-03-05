@@ -7,12 +7,14 @@ import PropComponent from "./Components/PropComponent";
 import ColorChanger from "./screens/ColorChanger";
 import Netflix from "./screens/NetflixCard";
 import FlastListDemo from "./screens/FlastList";
+import FetchData from "./screens/FetchData";
 
 export default function App() {
   let name = "Shreyas"
   return (
     <View >
-      <ColorChanger />
+      <FetchData />
+      {/* <ColorChanger /> */}
       {/* <Counter /> */}
       {/* <Netflix /> */}
       {/* <PropComponent /> */}

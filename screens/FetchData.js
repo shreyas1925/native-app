@@ -66,3 +66,10 @@ const styles = StyleSheet.create({
         textAlign: "center",
     }
 })
+
+// how to access image from an api
+
+{/* < Image style = {styles.xyz }
+resizeMode = "cover"
+source = {{ uri: item.img }}
+/> */}

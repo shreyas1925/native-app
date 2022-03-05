@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, FlatList, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 
 // using a sample api to test out
@@ -12,6 +12,7 @@ const FetchData = () => {
             const res = await fetch("https://thapatechnical.github.io/userapi/users.json");
             const mydata = await res.json();
             setData(mydata);
+            // isSetLoad(true);
             isSetLoad(false);
         } catch (err) { console.log(err) }
     }
@@ -22,18 +23,24 @@ const FetchData = () => {
 
     return (
         <View style={styles.mainContainer}>
-            <FlatList
-                data={data}
-                renderItem={({ item }) => {
-                    return (
-                        <View style={styles.subContainer}>
-                            <Text style={[styles.textStyle, styles.spanStyle]}>{item.userId}</Text>
-                            <Text style={styles.textStyle}>{item.name}</Text>
-                            <Text style={styles.textStyle}>{item.email}</Text>
-                        </View >
-                    )
-                }}
-            />
+
+            {isload ? (<View style={styles.loaderStyle}><ActivityIndicator size="large" color="black" /></View>) :
+                (
+                    <FlatList
+                        data={data}
+                        renderItem={({ item }) => {
+                            return (
+                                <View style={styles.subContainer}>
+                                    <Text style={[styles.textStyle, styles.spanStyle]}>{item.userId}</Text>
+                                    <Text style={styles.textStyle}>{item.name}</Text>
+                                    <Text style={styles.textStyle}>{item.email}</Text>
+                                </View >
+                            )
+                        }}
+                    />
+                )
+            }
+
 
 
         </View >
@@ -64,6 +71,12 @@ const styles = StyleSheet.create({
         width: "15%",
         borderRadius: "60%",
         textAlign: "center",
+    },
+    loaderStyle: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh"
     }
 })
 

@@ -33,11 +33,12 @@ const LoginScreen = () => {
                     onValueChange={() => { setChecked(!checked) }}
                     color={checked ? "#219ebc" : undefined}
                 />
-
                 <Text style={styles.policyTextStyle}>I agree for all rules and policies</Text>
             </View>
             <View >
-                <TouchableOpacity style={styles.buttonStyle}>
+                <TouchableOpacity
+                    disabled={!checked}
+                    style={checked ? styles.buttonStyle : styles.buttonStyle1}>
                     <Text style={styles.textStyle1}>Login</Text>
                 </TouchableOpacity>
             </View>
@@ -99,9 +100,16 @@ const styles = StyleSheet.create({
     },
     buttonStyle: {
         marginTop: 30,
-        borderWidth: 1,
+        borderWidth: 0,
         width: "100%",
         padding: 8,
         backgroundColor: "#219ebc"
+    },
+    buttonStyle1: {
+        marginTop: 30,
+        borderWidth: 0,
+        width: "100%",
+        padding: 8,
+        backgroundColor: "lightgrey"
     }
 })

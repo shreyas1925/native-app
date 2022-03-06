@@ -8,12 +8,14 @@ import ColorChanger from "./screens/ColorChanger";
 import Netflix from "./screens/NetflixCard";
 import FlastListDemo from "./screens/FlastList";
 import FetchData from "./screens/FetchData";
+import LoginScreen from "./screens/LoginScreen";
 
 export default function App() {
   let name = "Shreyas"
   return (
     <View >
-      <FetchData />
+      <LoginScreen />
+      {/* <FetchData /> */}
       {/* <ColorChanger /> */}
       {/* <Counter /> */}
       {/* <Netflix /> */}

@@ -1,19 +1,21 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
+import CheckBox from "expo-checkbox"
 
 const LoginScreen = () => {
+
+    const [checked, setChecked] = useState(false);
+
     return (
         <View style={styles.mainContainer}>
             <Text style={styles.textStyle}>Login Form</Text>
             <Text style={styles.description}>Contact us for an queries regarding placements <br />@shreyas__19</Text>
-
             <View style={styles.subContainer}>
                 <Text style={styles.lableStyle}>Enter your name</Text>
                 <TextInput
                     style={styles.inputStyle}
                     autoCapitalize="none"
                     autoCorrect={false}
-                // secureTextEntry={true}
                 />
             </View>
             <View style={styles.subContainer}>
@@ -26,7 +28,12 @@ const LoginScreen = () => {
                 />
             </View>
             <View style={styles.wrapperStyle}>
-                <Text style={styles.checkboxStyle}>a</Text>
+                <CheckBox style={styles.checkboxStyle}
+                    value={checked}
+                    onValueChange={() => { setChecked(!checked) }}
+                    color={checked ? "#219ebc" : undefined}
+                />
+
                 <Text style={styles.policyTextStyle}>I agree for all rules and policies</Text>
             </View>
             <View >
@@ -73,8 +80,8 @@ const styles = StyleSheet.create({
     inputStyle: {
         borderWidth: 2,
         marginVertical: 15,
-        width: "60%",
-        paddingVertical: 5,
+        width: "100%",
+        paddingVertical: 10,
         paddingHorizontal: 10
     },
     wrapperStyle: {
@@ -83,7 +90,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
     },
     checkboxStyle: {
-        marginRight: 25
+        marginRight: 10,
+        marginTop: 2,
     },
     policyTextStyle: {
         fontSize: 14,
@@ -92,8 +100,8 @@ const styles = StyleSheet.create({
     buttonStyle: {
         marginTop: 30,
         borderWidth: 1,
-        width: "60%",
-        padding: 5,
+        width: "100%",
+        padding: 8,
         backgroundColor: "#219ebc"
     }
 })

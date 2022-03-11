@@ -24,7 +24,7 @@ const LoginScreen = () => {
                     style={styles.inputStyle}
                     autoCapitalize="none"
                     autoCorrect={false}
-                // secureTextEntry={true}
+                    secureTextEntry={true}
                 />
             </View>
             <View style={styles.wrapperStyle}>

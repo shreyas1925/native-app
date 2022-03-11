@@ -1,11 +1,17 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import CheckBox from "expo-checkbox"
 
 const LoginScreen = () => {
-
     const [checked, setChecked] = useState(false);
+    const [name, setName] = useState("")
+    const [password, setPassword] = useState(null)
 
+    const submitDetails = () => {
+        return Alert.alert(name, password);
+        // console.log("a");
+        // console.log(name);
+    }
     return (
         <View style={styles.mainContainer}>
             <Text style={styles.textStyle}>Login Form</Text>
@@ -16,6 +22,9 @@ const LoginScreen = () => {
                     style={styles.inputStyle}
                     autoCapitalize="none"
                     autoCorrect={false}
+                    value={name}
+                    // onChange={(e) => setName(e.target.value)} it's also working one more in react native
+                    onChangeText={(data) => setName(data)}
                 />
             </View>
             <View style={styles.subContainer}>
@@ -25,6 +34,8 @@ const LoginScreen = () => {
                     autoCapitalize="none"
                     autoCorrect={false}
                     secureTextEntry={true}
+                    value={password}
+                    OnChange={(e) => setPassword(e.target.value)}
                 />
             </View>
             <View style={styles.wrapperStyle}>
@@ -38,7 +49,8 @@ const LoginScreen = () => {
             <View>
                 <TouchableOpacity
                     disabled={!checked}
-                    style={checked ? styles.buttonStyle : styles.buttonStyle1}>
+                    style={checked ? styles.buttonStyle : styles.buttonStyle1}
+                    onPress={() => submitDetails()}>
                     <Text style={styles.textStyle1}>Login</Text>
                 </TouchableOpacity>
             </View>
@@ -63,10 +75,11 @@ const styles = StyleSheet.create({
     textStyle1: {
         textAlign: "center",
         fontWeight: "bold",
-        fontSize: 14,
+        fontSize: 16,
         textAlign: "center",
         paddingVertical: 2,
-        color: "white"
+        color: "white",
+        textTransform: "uppercase",
     },
     description: {
         marginTop: 30,

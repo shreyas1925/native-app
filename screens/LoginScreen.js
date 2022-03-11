@@ -24,7 +24,7 @@ const LoginScreen = () => {
                     style={styles.inputStyle}
                     autoCapitalize="none"
                     autoCorrect={false}
-                    secureTextEntry={true}
+                // secureTextEntry={true}
                 />
             </View>
             <View style={styles.wrapperStyle}>
@@ -35,7 +35,7 @@ const LoginScreen = () => {
                 />
                 <Text style={styles.policyTextStyle}>I agree for all rules and policies</Text>
             </View>
-            <View >
+            <View>
                 <TouchableOpacity
                     disabled={!checked}
                     style={checked ? styles.buttonStyle : styles.buttonStyle1}>

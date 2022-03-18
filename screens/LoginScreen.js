@@ -2,7 +2,8 @@ import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'reac
 import React, { useState } from 'react'
 import CheckBox from "expo-checkbox"
 
-const LoginScreen = () => {
+
+const LoginScreen = ({ navigation }) => {
     const [checked, setChecked] = useState(false);
     const [name, setName] = useState("")
     const [password, setPassword] = useState(null)
@@ -10,6 +11,7 @@ const LoginScreen = () => {
     const submitDetails = () => {
         // return Alert.alert(name, password);
         if (name === "Shreyas" && password === "1234") {
+            navigation.navigate("Home")
             Alert.alert(`Successfully logged ${name}`)
             console.log(`Successfully logged ${name}`)
         } else {

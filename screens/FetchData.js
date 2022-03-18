@@ -23,11 +23,11 @@ const FetchData = () => {
 
     return (
         <View style={styles.mainContainer}>
-
             {isload ? (<View style={styles.loaderStyle}><ActivityIndicator size="large" color="black" /></View>) :
                 (
                     <FlatList
                         data={data}
+                        showsVerticalScrollIndicator={false}
                         renderItem={({ item }) => {
                             return (
                                 <View style={styles.subContainer}>

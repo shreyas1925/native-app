@@ -9,24 +9,34 @@ import Netflix from "./screens/NetflixCard";
 import FlastListDemo from "./screens/FlastList";
 import FetchData from "./screens/FetchData";
 import LoginScreen from "./screens/LoginScreen";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export default function App() {
-  let name = "Shreyas"
+
+  const Stack = createNativeStackNavigator()
+  // let name = "Shreyas"
   return (
-    <View >
-      <LoginScreen />
-      {/* <FetchData /> */}
-      {/* <ColorChanger /> */}
-      {/* <Counter /> */}
-      {/* <Netflix /> */}
-      {/* <PropComponent /> */}
-      {/* <ImageComponent /> */}
-      {/* <Text style={styles.para}>Heyy Shreyas 🚀❤️ </Text> */}
-      {/* <FlastListDemo /> */}
-      {/* <CustomCompo name={name} /> */}
-      {/* <StatusBar style="auto" /> */}
-    </View >
-  );
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Home" component={FetchData} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
+  // <View >
+  {/* <LoginScreen /> */ }
+  {/* <FetchData /> */ }
+  {/* <ColorChanger /> */ }
+  {/* <Counter /> */ }
+  {/* <Netflix /> */ }
+  {/* <PropComponent /> */ }
+  {/* <ImageComponent /> */ }
+  {/* <Text style={styles.para}>Heyy Shreyas 🚀❤️ </Text> */ }
+  {/* <FlastListDemo /> */ }
+  {/* <CustomCompo name={name} /> */ }
+  {/* <StatusBar style="auto" /> */ }
+  // </View >
 }
 
 const styles = StyleSheet.create({

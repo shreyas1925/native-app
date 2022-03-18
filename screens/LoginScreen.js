@@ -8,9 +8,14 @@ const LoginScreen = () => {
     const [password, setPassword] = useState(null)
 
     const submitDetails = () => {
-        return Alert.alert(name, password);
-        // console.log("a");
-        // console.log(name);
+        // return Alert.alert(name, password);
+        if (name === "Shreyas" && password === "1234") {
+            Alert.alert(`Successfully logged ${name}`)
+            console.log(`Successfully logged ${name}`)
+        } else {
+            Alert.alert("Invalid credentials")
+            console.log("Invalid credentials")
+        }
     }
     return (
         <View style={styles.mainContainer}>
@@ -23,7 +28,7 @@ const LoginScreen = () => {
                     autoCapitalize="none"
                     autoCorrect={false}
                     value={name}
-                    // onChange={(e) => setName(e.target.value)} it's also working one more in react native
+                    // onChange={(e) => setName(e.target.value)} 
                     onChangeText={(data) => setName(data)}
                 />
             </View>
@@ -35,7 +40,7 @@ const LoginScreen = () => {
                     autoCorrect={false}
                     secureTextEntry={true}
                     value={password}
-                    OnChange={(e) => setPassword(e.target.value)}
+                    onChangeText={(data) => setPassword(data)}
                 />
             </View>
             <View style={styles.wrapperStyle}>

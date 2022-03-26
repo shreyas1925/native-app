@@ -28,7 +28,6 @@ const usersSchema = mongoose.Schema({
     },
 
 });
-
 // Creating our collection
 const UserData = new mongoose.model("Userdata", usersSchema);
 

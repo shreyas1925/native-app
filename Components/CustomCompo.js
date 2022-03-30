@@ -10,7 +10,6 @@ const CustomCompo = ({ name }) => {
     </View>
   )
 };
-
 const styles = StyleSheet.create({
   firstText: {
     color: "red",

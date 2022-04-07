@@ -8,7 +8,6 @@ import {
 import { useFonts } from 'expo-font';
 import AppLoading from "expo-app-loading"
 export default function ImageComponent({ text }) {
-
     let [fontsl] = useFonts({
         Akronim_400Regular
     })

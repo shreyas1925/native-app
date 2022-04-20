@@ -9,5 +9,4 @@ app.use(express.json());
 app.use(router);
 
 app.get("/", () => { console.log("Heyy") })
-
 app.listen(PORT, () => console.log(`App is working at port ${PORT}`))
